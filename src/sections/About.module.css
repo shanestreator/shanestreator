@@ -1,0 +1,10 @@
+.fontSize > p {
+  font-size: 1.25rem;
+  color: #00688B;
+}
+
+@media (min-width: 500px) {
+  .fontSize > p {
+    font-size: 1.5rem;
+  }
+}
