@@ -80,33 +80,33 @@ const LandingPage = () => (
             </Heading>
 
             <Heading
-            textAlign="center"
-            as="h3"
-            color="primary"
-            opacity='0.8'
-            fontSize={[3, 4, 6]}
-            mb={[4, 5, 6]}
-          >
-            Full Stack Developer
-          </Heading>
+              textAlign="center"
+              as="h3"
+              color="primary"
+              opacity='0.8'
+              fontSize={[3, 4, 6]}
+              mb={[4, 5]}
+            >
+              Full Stack Developer
+            </Heading>
 
             <Heading
-            as="h3"
-            color="secondaryLight"
-            fontSize={[3, 4, 6]}
-            mb={[4, 5, 6]}
-            textAlign="center"
-            style={centerHorizontally}
-          >
-            <TextLoop interval={5000}>
-              {roles
-                .map(text => (
-                  <Text key={text}>
-                    {text}
-                  </Text>
-                ))}
-            </TextLoop>
-          </Heading>
+              as="h3"
+              color="secondaryLight"
+              fontSize={[3, 4, 6]}
+              mb={[4, 5, 6]}
+              textAlign="center"
+              style={centerHorizontally}
+            >
+              <TextLoop interval={5000}>
+                {roles
+                  .map(text => (
+                    <Text key={text}>
+                      {text}
+                    </Text>
+                  ))}
+              </TextLoop>
+            </Heading>
 
             <Flex alignItems="center" justifyContent="center" flexWrap="wrap">
               {socialLinks.map(({ id, ...rest }) => (
