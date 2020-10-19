@@ -87,7 +87,7 @@ const LandingPage = () => (
               fontSize={[3, 4, 6]}
               mb={[4, 5]}
             >
-              Full Stack Developer
+              Software Developer
             </Heading>
 
             <Heading
