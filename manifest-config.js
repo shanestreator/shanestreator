@@ -1,11 +1,11 @@
 const colors = require('./colors');
 
 module.exports = {
-  name: 'Mate Gatsby Starter',
-  short_name: 'Mate Gatsby Starter',
+  name: 'Shane Streator',
+  short_name: 'Shane Streator',
   start_url: '/',
   background_color: colors.background,
   theme_color: colors.primary,
   display: 'minimal-ui',
-  icon: 'media/SSwhite.png',
+  icon: 'static/favicon.ico',
 };

@@ -13,7 +13,7 @@ import Hide from '../components/Hide';
 
 import './Projects.styles.css'
 
-const Background = () => (
+const Background = () => ( 
   <div>
     <Triangle
       color="secondaryLight"

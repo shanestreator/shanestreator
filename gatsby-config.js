@@ -2,7 +2,11 @@ const contentful = require('contentful');
 const manifestConfig = require('./manifest-config');
 require('dotenv').config();
 
-const { ACCESS_TOKEN, SPACE_ID, ANALYTICS_ID, DETERMINISTIC } = process.env;
+const { ACCESS_TOKEN, SPACE_ID, ANALYTICS_ID, DETERMINISTIC, NODE_ENV } = process.env;
+
+const IS_PROD = NODE_ENV === 'production'
+
+const siteUrl = IS_PROD ? 'https://www.shanestreator.com' : 'http://localhost:8000'
 
 const client = contentful.createClient({
   space: SPACE_ID,
@@ -63,6 +67,12 @@ module.exports = client.getEntries().then(entries => {
     siteMetadata: {
       isMediumUserDefined: null,
       deterministicBehaviour: !!DETERMINISTIC,
+      siteUrl,
+      title: 'Shane Streator',
+      image: '/images/SS-logo.svg',
+      siteLanguage: 'en',
+      ogLanguage: 'en_US',
+      favicon: '/favicon.ico',
     },
     plugins,
   };
