@@ -40,9 +40,12 @@ const Helmet = ({ theme = {} }) => (
     `}
     render={data => {
       const { favicon16, favicon32, bigIcon, appleIcon } = data.contentfulFaviconMedia
-      const { description } = data.contentfulAboutDescriptionRichTextNode
+      let { description } = data.contentfulAboutDescriptionRichTextNode
       const { name } = data.contentfulAbout
       const title = `${name}`
+      
+      description = JSON.parse(description).content[0].content[0].value
+      console.log('description: ', description)
 
       return (
         <ReactHelmet htmlAttributes={{ lang: 'en' }}>
